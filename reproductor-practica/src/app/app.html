@@ -1,0 +1,12 @@
+<div *ngFor="let artista of artistas" class="card">
+  <h2>{{ artista.nombre }}</h2>
+  <p>Género: {{ artista.genero }}</p>
+
+  <h3>Álbumes:</h3>
+  <ul>
+    <li *ngFor="let album of artista.albums">
+      {{ album.titulo }} - ${{ album.precio }}
+    </li>
+  </ul>
+</div>
+<router-outlet />
